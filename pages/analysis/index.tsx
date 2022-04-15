@@ -19,7 +19,7 @@ type Props = {
 const Index = ({ allPosts }: Props) => {
   const chapters = CHAPTER_NAMES.map((name, chapterIndex) => {
     const chapterPosts = allPosts.filter(
-      (post) => post.id.split('.').at(0) == String(chapterIndex + 1)
+      (post) => post.id.split('.')[0] == String(chapterIndex + 1)
     );
 
     const sectionLinks = chapterPosts.map((post, sectionIndex) => (

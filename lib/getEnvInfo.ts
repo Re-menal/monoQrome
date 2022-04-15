@@ -8,7 +8,7 @@ type Info = {
 const getEnvsInfo = (contents: string[]): Info[] => {
   return contents.map((content) => {
     // 環境名、ラベル名取得
-    const name = content.match(/(?<=\\begin{).*(?=})/).at(0);
+    const name = content.match(/(?<=\\begin{).*(?=})/)[0];
     const id =
       content.search('\\label') != -1
         ? content.match(/(?<=\\label{).*(?=})/)!.at(0)
