@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       </Head>
       <Container>
         <div className='flex justify-center content-center'>
-          <h1 className='inline-block m-6 p-10 font-display tracking-tight text-8xl'>
+          <h1 className='inline-block m-6 p-10 font-display tracking-tight text-6xl lg:text-8xl'>
             monoQrome
           </h1>
         </div>
