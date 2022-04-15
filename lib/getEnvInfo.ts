@@ -11,7 +11,7 @@ const getEnvsInfo = (contents: string[]): Info[] => {
     const name = content.match(/(?<=\\begin{).*(?=})/)[0];
     const id =
       content.search('\\label') != -1
-        ? content.match(/(?<=\\label{).*(?=})/)!.at(0)
+        ? content.match(/(?<=\\label{).*(?=})/)![0]
         : '';
 
     const [env, proofEnv] = content.split('%--');
