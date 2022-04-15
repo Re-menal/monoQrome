@@ -1,0 +1,140 @@
+\documentclass[uplatex,dvipdfmx,a4paper]{jsarticle}
+
+%##
+%slug:real-number
+%id:1.1
+%title:テストページ
+%date:2022-04-05
+%##
+
+% 
+\usepackage{silence}
+\WarningFilter{latexfont}{Some font shapes}
+\WarningFilter{latexfont}{Font shape}
+%
+
+% パッケージ
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsthm,amsmath, mathtools, amssymb, mathrsfs}
+% amsthm -> 定理環境。
+% amsmath, mathtools -> 基本の数式　amsmath は mathtools に含まれる。
+% amssymb -> 記号の追加。 amsfonts は amssymb に含まれる。
+% mathrsfs -> 花文字。 rsfso を使うと落ち着いた書体になる（美文書 p90）。
+% ※ latexsym は amsmath に含まれるようになった（ただし字形が微妙に異なる）。
+\usepackage{framed}
+% framed -> 枠。
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 定理 & コマンド
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}[subsection]
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{cor}[theorem]{系}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{ex}[theorem]{例}
+\newtheorem{remark}[theorem]{注意}
+\newtheorem*{remark*}{注意}
+\newtheorem{pg}[theorem]{ }
+\newtheorem*{cons}{考察}
+\newtheorem{step}{Step}
+\renewcommand{\proofname}{\textbf{証明}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\bDelta}{\mathbbl{\Delta}}
+\newcommand{\Ob}{\mathrm{Ob}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\si}{\scriptstyle}
+\newcommand{\dps}{\displaystyle}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\cl}[1]{\overline{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+\title{関数の解析}
+\author{Re-menal}
+\date{\today}
+%
+
+\begin{document}
+\begin{definition}
+\label{def-limit-of-function}
+$A \subset D,\ a \in \cl{A},\ \alpha \in \R$ とする。
+\begin{enumerate}
+    \item \textbf{$x \to a$ のとき $f(x)$ が $A$ において極限 $\alpha$ に収束する}とは、任意の $\ve > 0$ に対して、ある $\delta > 0$ が存在して、 $|x - a| < \delta$ なる任意の $x \in A$ に対し $|f(x) - \alpha| < \ve$ が成り立つことをいう。
+    このとき、記号で 
+    \begin{align*}
+        & \lim_{x \to a,\ x \in A} f(x) = \alpha \\ 
+        & f(x) \to \alpha\ (x \to a,\ x \in A)
+    \end{align*}
+    などとかく。
+    また、 $A = D$ であるとき、単に\textbf{$x \to a$ のとき $f(x)$ が極限 $\alpha$ に収束する}といい、
+    \begin{align*}
+        & \lim_{x \to a} f(x) = \alpha \\ 
+        & f(x) \to \alpha\ (x \to a)
+    \end{align*}
+    と表す。
+    \item \textbf{$x \to a$ のとき $f(x)$ が $A$ において $+\infty$ に発散する}とは、任意の $M > 0$ に対して、ある $\delta > 0$ が存在して、 $|x - a| < \delta$ なる任意の $x \in A$ に対し $M < f(x)$ が成り立つことをいう。
+    また、 \textbf{$x \to a$ のとき $f(x)$ が $A$ において $-\infty$ に発散する}とは、任意の $M > 0$ に対して、ある $\delta > 0$ が存在して、 $|x - a| < \delta$ なる任意の $x \in A$ に対し $f(x) < M$ が成り立つことをいう。
+\end{enumerate}
+\end{definition}
+%++
+\begin{proposition}
+\label{prop-charactarization-of-continuity-of-function}
+$a \in D$ に対し、次の 2 条件は同値。
+\begin{enumerate}
+    \item $f$ は $a$ において連続。
+    \item 極限 $\dps \lim_{x \to a} f(x) = f(a)$ が存在する。
+\end{enumerate}
+\end{proposition}
+%--
+\begin{proof}
+    %Step1
+    1 ステップ目。
+    \par
+    テストテスト。
+    \par
+    テスト。
+    \par
+    %Step2
+    2 ステップ目。
+    \par
+    かきくけこ。
+    \begin{oframed}%1
+        詳細。
+        \par
+        テスト。
+        \par
+        テストテスト。
+    \end{oframed}%1
+    \par
+    終了。
+\end{proof}
+%++
+\begin{theorem}
+テストの定理。
+\begin{enumerate}%1
+    \item 次の 2 つが成り立つ。
+        \begin{itemize}%2
+            \item 主張 1
+            \item 主張 2
+        \end{itemize}%2
+    \item 主張 3
+\end{enumerate}%1
+加えて、
+\begin{itemize}%1
+    \item X が次の 2 条件
+        \begin{enumerate}%2
+            \item 条件 1
+            \item 条件 2
+        \end{enumerate}%2
+    をみたすとき、P が成り立つ。
+    \item 主張 Q 。
+\end{itemize}%1
+\end{theorem}
+\end{document}

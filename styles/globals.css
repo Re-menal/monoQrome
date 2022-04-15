@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap&text=monoQrome');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ul,
+  ol {
+    @apply ml-1;
+  }
+
+  li {
+    @apply ml-6 my-2 pl-2;
+  }
+}
+
+.envname {
+  @apply px-2 text-white inline-block rounded-md bg-sky-400 shadow-md shadow-sky-400/50;
+}
+
+.category {
+  @apply before:content-[""] before:w-4 before:h-4 before:bg-cyan-500/50 before:absolute before:top-3 before:-left-7;
+}
+
+.top-page-box {
+  @apply m-4 p-6 border-2 rounded-lg transition duration-200 hover:bg-gray-200/30;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap');
+
+:root {
+  --font-serif: 'Noto Serif JP', serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+h2 {
+  font-family: var(--font-serif);
+} */
